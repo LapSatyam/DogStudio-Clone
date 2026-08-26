@@ -1,11 +1,20 @@
 import { Canvas } from "@react-three/fiber";
-import Dog from "./components/Dog";
+import Dog from "./components/Dog"; 
 
-const App = () => {
+const App = () => { 
+
   return (
-    <Canvas>
-      <Dog />
-    </Canvas>
+    <>
+      <main className="relative">
+        <Canvas
+         className="h-screen! w-screen fixed! top-0 left-0 -z-1 bg-[url('./bg.png')] bg-cover">
+          <Dog />
+        </Canvas>
+        <section id="secrion1"></section>
+        <section></section>
+        <section id="section3" ></section>
+      </main>
+    </>
   );
 };
 

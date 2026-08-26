@@ -6,9 +6,15 @@ import {
   useTexture,
 } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Dog = () => {
+  gsap.registerPlugin(useGSAP());
+  gsap.registerPlugin(ScrollTrigger);
+
   const model = useGLTF("./models/dog.drc.glb");
 
   useThree(({ camera, gl }) => {
@@ -23,13 +29,19 @@ const Dog = () => {
     actions["Take 001"].play();
   }, [actions]);
 
-  const [normalMap, sampleMatCap, branchMap, branchNormalMap] = useTexture([
+  const [normalMap, sampleMatCap] = useTexture([
     "/dog_normals.jpg",
     "matcap/mat-2.png",
+  ]).map((texture) => {
+    texture.flipY = false;
+    texture.colorSpace = THREE.SRGBColorSpace;
+    return texture;
+  });
+
+  const [branchMap, branchNormalMap] = useTexture([
     "/branches_diffuse.jpeg",
     "/branches_normals.jpeg",
   ]).map((texture) => {
-    texture.flipY = false;
     texture.colorSpace = THREE.SRGBColorSpace;
     return texture;
   });
@@ -51,6 +63,45 @@ const Dog = () => {
       child.material = branchMaterial;
     }
   });
+
+  const dogModel = useRef(model);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section1",
+        endTrigger: "#section3",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 2.5,
+        markers: true,
+      },
+    });
+
+    tl.to(dogModel.current.scene.position, {
+      z: "-=0.78",
+      y: "+=0.1",
+    })
+      .to(dogModel.current.scene.rotation, {
+        x: `+=${Math.PI / 12}`,
+      })
+      .to(
+        dogModel.current.scene.rotation,
+        {
+          y: `-=${Math.PI}`,
+          x: `-=${Math.PI / 50}`,
+        },
+        "third",
+      )
+      .to(
+        dogModel.current.scene.position,
+        {
+          x: "-=0.4",
+          z: "+=0.55",
+        },
+        "third",
+      );
+  }, []);
 
   return (
     <>

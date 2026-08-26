@@ -1,16 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "tailwindcss";
 
-html,
-body{
-  width: 100%;
-  background: #111;
-}
-
-#root {
-    height: 100vh;
-    width: 100%;
+section{
+  @apply h-screen w-full border-2 border-white
 }
