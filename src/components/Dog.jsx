@@ -74,7 +74,6 @@ const Dog = () => {
         start: "top top",
         end: "bottom bottom",
         scrub: 2.5,
-        markers: true,
       },
     });
 
