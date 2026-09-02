@@ -4,14 +4,15 @@ import Dog from "./components/Dog";
 const App = () => {
   return (
     <>
-      <main className="relative text-white">
+      <main className="relative">
         <Canvas className="h-screen! w-screen fixed! top-0 left-0 -z-1 bg-[url('./bg.png')] bg-cover">
           <Dog />
         </Canvas>
-        <section id="secrion1">
-          <nav className="flex justify-between p-2">
+        <section id="section1">
+          <nav className="flex justify-between px-2.5 py-3">
+            {/* lft Icon */}
             <svg
-              className="h-10"
+              className="h-9.5"
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 401.23099 116.838"
@@ -32,32 +33,34 @@ const App = () => {
               <path d="M128.905,30.638h10.41501c-1.21701,4.802-5.74901,7.5074-11.22701,7.5074-7.169,0-11.904-5.2754-11.904-13.8649,0-7.8455,4.32899-13.5944,11.769-13.5944,4.464,0,8.31899,1.8938,9.40099,6.1547h13.59401c-1.48801-10.68614-10.88901-16.8408-23.26601-16.8408-15.758,0-24.95699,9.67161-24.95699,24.2805,0,14.6765,9.46899,24.2805,22.184,24.2805,7.237,0,11.76801-2.7054,14.88-6.5605v5.7489h11.29399V21.3046h-22.183v9.3334Z"></path>
               <path d="M30.4351,61.1758h-10.4155L0,116.838H10.3479L30.4351,61.1758Z"></path>
             </svg>
+
+            {/* middle */}
             <div className="flex group transition">
-              <span className="pr-4 pt-0.75  group-hover:pr-1 ">
-                <svg
-                  className="h-5"
-                  viewBox="0 0 24 24"
-                  fill="#ff4c43"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"></path>{" "}
-                  </g>
-                </svg>
+              <span className="pr-4  group-hover:pr-1 ">
+                <i class="ri-arrow-right-s-line text-orange-600 font-extrabold"></i>
               </span>
               <span>Our Showreel</span>
             </div>
 
             {/* Menu */}
-            <div></div>
+            <div>
+              <i class="ri-menu-3-line text-2xl"></i>
+            </div>
           </nav>
+
+          {/* Center */}
+          <div className="w-full flex mt-10">
+            {/* left */}
+            <div className="flex-1 flex items-center justify-end">
+              <h1 className="text-8xl py-4 text-right font-semibold">
+                We <br />
+                Make <br /> Good <br /> Shit
+              </h1>
+            </div>
+
+            {/* right */}
+            <div className="flex-1">Lorem ipsum dolor sit amet.</div>
+          </div>
         </section>
         <section></section>
         <section id="section3"></section>
