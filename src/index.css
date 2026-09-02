@@ -29,3 +29,12 @@ html {
 #section1 a {
   @apply hover:text-white/60 transition duration-200 ease-in;
 }
+
+#section2 {
+  a {
+    @apply text-7xl align-top font-thin text-white/20 hover:text-white transition ease-in-out;
+  }
+  small {
+    @apply text-xs align-top uppercase font-semibold tracking-widest;
+  }
+}

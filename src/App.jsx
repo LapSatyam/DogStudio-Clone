@@ -4,11 +4,13 @@ import Dog from "./components/Dog";
 const App = () => {
   return (
     <>
-      <main className="relative">
+      <main className="">
         <Canvas className="h-screen! w-screen fixed! top-0 left-0 -z-1 bg-[url('./bg.png')] bg-cover">
           <Dog />
         </Canvas>
-        <section id="section1" className="relative">
+
+        {/* SECTION 1 */}
+        <section id="section1" className="relative min-h-fit w-full">
           {/* Left Line */}
           <div className="absolute w-150 h-px bg-red-500 rotate-45 bottom-30 -left-25"></div>
 
@@ -99,7 +101,31 @@ const App = () => {
             </div>
           </div>
         </section>
-        <section></section>
+        <section id="section2" className="h-fit w-full">
+          <div className="flex flex-col mt-[10%] gap-14">
+            <a href="#">
+              <small>2020 - Ongoing</small> Tommorowland
+            </a>
+            <a href="#">
+              <small>2018 - Today</small> Navy Pier
+            </a>
+            <a href="#">
+              <small>2015 - Today</small> MSI Chicago
+            </a>
+            <a href="#">
+              <small>2016</small> This Was Loise's Phone
+            </a>
+            <a href="#">
+              <small>2012 - Today</small> KIKK Festival 2018
+            </a>
+            <a href="#">
+              <small>2017</small> The Kennedy Center
+            </a>
+            <a href="#">
+              <small>2016 - Ongoing</small> Royal Opera of Wallonia
+            </a>
+          </div>
+        </section>
         <section id="section3"></section>
       </main>
     </>
