@@ -8,11 +8,18 @@ const App = () => {
         <Canvas className="h-screen! w-screen fixed! top-0 left-0 -z-1 bg-[url('./bg.png')] bg-cover">
           <Dog />
         </Canvas>
-        <section id="section1">
-          <nav className="flex justify-between px-2.5 py-3">
-            {/* lft Icon */}
+        <section id="section1" className="relative">
+          {/* Left Line */}
+          <div className="absolute w-150 h-px bg-red-500 rotate-45 bottom-30 -left-25"></div>
+
+          {/* Right Line */}
+          <div className="absolute w-40 h-px bg-red-500 -rotate-45 top-76 right-36"></div>
+
+          {/* Top */}
+          <nav className="flex justify-between px-10 py-14">
+            {/* logo */}
             <svg
-              className="h-9.5"
+              className="h-8"
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 401.23099 116.838"
@@ -35,11 +42,9 @@ const App = () => {
             </svg>
 
             {/* middle */}
-            <div className="flex group transition">
-              <span className="pr-4  group-hover:pr-1 ">
-                <i class="ri-arrow-right-s-line text-orange-600 font-extrabold"></i>
-              </span>
-              <span>Our Showreel</span>
+            <div className="flex font-semibold text-xs group cursor-pointer">
+              <i class="ri-arrow-right-s-line text-orange-600 -translate-x-3.5 group-hover:-translate-x-1.5 transition duration-200 ease-out font-black text-sm"></i>
+              Our Showreel
             </div>
 
             {/* Menu */}
@@ -49,17 +54,49 @@ const App = () => {
           </nav>
 
           {/* Center */}
-          <div className="w-full flex mt-10">
+          <div className="w-full gap-2 flex">
             {/* left */}
             <div className="flex-1 flex items-center justify-end">
-              <h1 className="text-8xl py-4 text-right font-semibold">
+              <h1 className="text-9xl text-right font-semibold font-[GT-Sectra]">
                 We <br />
                 Make <br /> Good <br /> Shit
               </h1>
             </div>
 
             {/* right */}
-            <div className="flex-1">Lorem ipsum dolor sit amet.</div>
+            <div className="flex-1"></div>
+          </div>
+
+          {/* Bottom */}
+          <div className="w-full flex mt-[10%] pl-70">
+            {/* left */}
+            <div className="flex-1"></div>
+
+            {/* right */}
+            <div className="flex-1 flex items-end">
+              <div className="w-[65%]">
+                <p className="text-2xl/tight text-white/80">
+                  Dogstudio is a multidisciplinary creative studio at the
+                  intersection of art, design and technology.
+                </p>
+                <p className="text-sm text-white/60 mt-5">
+                  Our goal is to deliver amazing experiences that make people
+                  talk, and build strategic value for brands, tech,
+                  entertainment, arts & culture.
+                </p>
+                <div className="flex justify-between text-xs text-white/90 mt-18">
+                  <a href="#">Facebook</a>
+                  <span>/</span>
+                  <a href="#">Instagram</a>
+                  <span>/</span>
+                  <a href="#">Dribble</a>
+                  <span>/</span>
+                  <a href="#">Twitter</a>
+                  <span>/</span>
+                  <a href="#">Newsletter</a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section></section>
