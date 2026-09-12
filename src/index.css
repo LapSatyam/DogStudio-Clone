@@ -32,9 +32,23 @@ html {
 
 #section2 {
   a {
-    @apply text-7xl align-top font-thin text-white/20 hover:text-white transition ease-in-out;
+    @apply text-7xl align-top font-thin text-white/15 hover:text-white transition ease-in-out;
+
+    small {
+      @apply inline-block text-xs align-top text-right uppercase font-semibold tracking-widest w-28 mr-7;
+    }
   }
-  small {
-    @apply text-xs align-top uppercase font-semibold tracking-widest;
-  }
+}
+
+#canvas::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(./bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -5,7 +5,10 @@ const App = () => {
   return (
     <>
       <main className="">
-        <Canvas className="h-screen! w-screen fixed! top-0 left-0 -z-1 bg-[url('./bg.png')] bg-cover">
+        <Canvas
+          id="canvas"
+          className="h-screen! w-screen fixed! top-0 left-0 -z-1 bg-cover"
+        >
           <Dog />
         </Canvas>
 
@@ -102,7 +105,10 @@ const App = () => {
           </div>
         </section>
         <section id="section2" className="h-fit w-full">
-          <div className="flex flex-col mt-[10%] gap-14">
+          <div className="flex flex-col mt-[10%] gap-14 ">
+            <div className="uppercase font-bold font-[GT-Sectra] text-[10px] ml-40 tracking-[0.2rem] text-white/40">
+              featured projects
+            </div>
             <a href="#">
               <small>2020 - Ongoing</small> Tommorowland
             </a>
