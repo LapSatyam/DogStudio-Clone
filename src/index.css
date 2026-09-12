@@ -32,7 +32,7 @@ html {
 
 #section2 {
   a {
-    @apply text-7xl align-top font-thin text-white/15 hover:text-white transition ease-in-out;
+    @apply text-7xl align-top font-thin text-white/15 hover:text-white/80 transition ease-in;
 
     small {
       @apply inline-block text-xs align-top text-right uppercase font-semibold tracking-widest w-28 mr-7;
@@ -44,11 +44,64 @@ html {
   content: "";
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
   background-image: url(./bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  @apply transition ease-out duration-300;
+}
+
+main:has(#section2 a:hover) #canvas::after {
+  opacity: 0;
+}
+
+#images {
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    @apply transition ease-in duration-300;
+  }
+}
+
+main:has(#tommorowland:hover) .tommorowland {
+  opacity: 1;
+  background-color: rgba(0, 102, 255, 0.158);
+}
+
+main:has(#navy:hover) .navy {
+  opacity: 1;
+  background-color: rgba(0, 0, 128, 0.158);
+}
+
+main:has(#msi:hover) .msi {
+  opacity: 1;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+main:has(#phone:hover) .phone {
+  opacity: 1;
+  background-color: rgba(253, 0, 253, 0.08);
+}
+
+main:has(#kikk:hover) .kikk {
+  opacity: 1;
+  background-color: rgba(0, 0, 139, 0.1);
+}
+
+main:has(#kennedy:hover) .kennedy {
+  opacity: 1;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+main:has(#opera:hover) .opera {
+  opacity: 1;
+  background-color: rgba(220, 20, 60, 0.25);
 }

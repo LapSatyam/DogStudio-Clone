@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import {
-  OrbitControls,
   useAnimations,
   useGLTF,
   useTexture,
@@ -110,7 +109,7 @@ const Dog = () => {
         rotation={[0, Math.PI / 5.5, 0]}
       />
       <directionalLight color={0xffffff} position={[0, 5, 5]} intensity={10} />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </>
   );
 };

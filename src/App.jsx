@@ -5,23 +5,36 @@ const App = () => {
   return (
     <>
       <main className="">
+        <div
+          id="images"
+          className="fixed h-full w-full top-0 left-0 flex flex-col -z-2"
+        >
+          <img className="tommorowland" src="./tommorowland.png" alt="" />
+          <img className="navy" src="./navy-pier.png" alt="" />
+          <img className="msi" src="./msi-chicago.png" alt="" />
+          <img className="phone" src="./phone.png" alt="" />
+          <img className="kikk" src="./kikk.png" alt="" />
+          <img className="kennedy" src="./kennedy.png" alt="" />
+          <img className="opera" src="./opera.png" alt="" />
+        </div>
+
         <Canvas
           id="canvas"
-          className="h-screen! w-screen fixed! top-0 left-0 -z-1 bg-cover"
+          className="h-screen! w-screen fixed! top-0 left-0 -z-2"
         >
           <Dog />
         </Canvas>
 
         {/* SECTION 1 */}
         <section id="section1" className="relative min-h-fit w-full">
-          {/* Left Line */}
+          {/* Left red Line */}
           <div className="absolute w-150 h-px bg-red-500 rotate-45 bottom-30 -left-25"></div>
 
-          {/* Right Line */}
+          {/* Right red Line */}
           <div className="absolute w-40 h-px bg-red-500 -rotate-45 top-76 right-36"></div>
 
-          {/* Top */}
-          <nav className="flex justify-between px-10 py-14">
+          {/* Top nav */}
+          <nav className="flex justify-between px-10 py-14 items-center">
             {/* logo */}
             <svg
               className="h-8"
@@ -47,7 +60,7 @@ const App = () => {
             </svg>
 
             {/* middle */}
-            <div className="flex font-semibold text-xs group cursor-pointer">
+            <div className="flex font-semibold text-xs group cursor-pointer -translate-x-9.5">
               <i class="ri-arrow-right-s-line text-orange-600 -translate-x-3.5 group-hover:-translate-x-1.5 transition duration-200 ease-out font-black text-sm"></i>
               Our Showreel
             </div>
@@ -109,25 +122,25 @@ const App = () => {
             <div className="uppercase font-bold font-[GT-Sectra] text-[10px] ml-40 tracking-[0.2rem] text-white/40">
               featured projects
             </div>
-            <a href="#">
+            <a href="#" id="tommorowland">
               <small>2020 - Ongoing</small> Tommorowland
             </a>
-            <a href="#">
+            <a href="#" id="navy">
               <small>2018 - Today</small> Navy Pier
             </a>
-            <a href="#">
+            <a href="#" id="msi">
               <small>2015 - Today</small> MSI Chicago
             </a>
-            <a href="#">
+            <a href="#" id="phone">
               <small>2016</small> This Was Loise's Phone
             </a>
-            <a href="#">
+            <a href="#" id="kikk">
               <small>2012 - Today</small> KIKK Festival 2018
             </a>
-            <a href="#">
+            <a href="#" id="kennedy">
               <small>2017</small> The Kennedy Center
             </a>
-            <a href="#">
+            <a href="#" id="opera">
               <small>2016 - Ongoing</small> Royal Opera of Wallonia
             </a>
           </div>
