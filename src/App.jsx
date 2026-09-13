@@ -61,7 +61,7 @@ const App = () => {
 
             {/* middle */}
             <div className="flex font-semibold text-xs group cursor-pointer -translate-x-9.5">
-              <i class="ri-arrow-right-s-line text-orange-600 -translate-x-3.5 group-hover:-translate-x-1.5 transition duration-200 ease-out font-black text-sm"></i>
+              <i className="ri-arrow-right-s-line text-orange-600 -translate-x-3.5 group-hover:-translate-x-1.5 transition duration-200 ease-out font-black text-sm"></i>
               Our Showreel
             </div>
 
@@ -117,11 +117,13 @@ const App = () => {
             </div>
           </div>
         </section>
+
+        {/* SECTION 2 */}
         <section id="section2" className="h-fit w-full">
-          <div className="flex flex-col mt-[10%] gap-14 ">
-            <div className="uppercase font-bold font-[GT-Sectra] text-[10px] ml-40 tracking-[0.2rem] text-white/40">
-              featured projects
-            </div>
+          <div className="uppercase font-bold font-[GT-Sectra] text-[10px] ml-41 tracking-[0.2rem] text-white/40  mt-[10%]">
+            featured projects
+          </div>
+          <div id="titles" className="flex flex-col gap-14 mt-12">
             <a href="#" id="tommorowland">
               <small>2020 - Ongoing</small> Tommorowland
             </a>
